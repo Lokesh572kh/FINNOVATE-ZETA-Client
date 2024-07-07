@@ -4,6 +4,7 @@ import CompanyLogo from '../components/CompanyLogo';
 import ProfileDropdown from '../components/ProfileDropdown';
 import SoundToggle from '../components/SoundToggle'; // Adjust path to your SoundToggle component
 import backgroundImage from '../assets/images.jpg'; // Adjust path to your image file
+import { Link } from 'react-router-dom';
 
 const MainPage = () => {
   useEffect(() => {
@@ -78,7 +79,7 @@ const MainPage = () => {
       <main className="main-content">
         <div className="buttons-container">
           <button className="play-button" style={playButtonStyle}>Play</button>
-          <button className="learn-button" style={learnButtonStyle}>Learn</button>
+          <Link className="learn-button" style={learnButtonStyle} to="/Entry">Learn</Link>
         </div>
         <div className="shop-button-container">
           <button className="shop-button" style={shopButtonStyle}>Shop</button>
