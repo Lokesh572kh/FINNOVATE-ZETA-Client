@@ -11,6 +11,10 @@ const indianStates = [
   "Delhi", "Puducherry", "Ladakh", "Jammu and Kashmir"
 ];
 
+const casteOptions = [
+  "Open", "OBC", "SC/ST", "NT/VJNT"
+];
+
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -63,9 +67,6 @@ const RegistrationForm = () => {
     <div className="flex justify-center items-center min-h-screen bg-blue-100">
       <form onSubmit={handleSubmit} className="bg-white p-10 rounded shadow-md w-full max-w-2xl">
         <div id="google_translate_element" className="mb-4"></div>
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl text-blue-600">Registration Form</h2>
-        </div>
         <div className="mb-4">
           <label className="block text-gray-700">Name</label>
           <input
@@ -77,7 +78,7 @@ const RegistrationForm = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700">Mobile No</label>
+          <label className="block text-gray-700">Mobile Number</label>
           <input
             type="text"
             name="mobile"
@@ -126,13 +127,17 @@ const RegistrationForm = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700">Caste</label>
-          <input
-            type="text"
+          <select
             name="caste"
             value={formData.caste}
             onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded mt-1"
-          />
+          >
+            <option value="">Select</option>
+            {casteOptions.map((caste) => (
+              <option key={caste} value={caste}>{caste}</option>
+            ))}
+          </select>
         </div>
         <button
           type="submit"

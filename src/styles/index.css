@@ -9,3 +9,44 @@
     background: rgb(105,255,242);
     background: linear-gradient(97deg, rgba(105,255,242,1) 0%, rgba(255,255,255,1) 100%); 
 }
+
+/* index.css */
+
+.profile-dropdown {
+    position: relative;
+    width: 40px; /* Adjust width as needed for the icon */
+    cursor: pointer;
+  }
+  
+  .profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #555555;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-content ul li {
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .dropdown-content ul li:hover {
+    background-color: #f0f0f0;
+  }
+  
