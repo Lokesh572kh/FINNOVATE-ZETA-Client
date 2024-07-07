@@ -1,8 +1,8 @@
 // MainPage.jsx
 import React, { useEffect } from 'react';
-import CompanyLogo from './CompanyLogo';
-import ProfileDropdown from './ProfileDropdown';
-import SoundToggle from './SoundToggle'; // Adjust path to your SoundToggle component
+import CompanyLogo from '../components/CompanyLogo';
+import ProfileDropdown from '../components/ProfileDropdown';
+import SoundToggle from '../components/SoundToggle'; // Adjust path to your SoundToggle component
 import backgroundImage from '../assets/images.jpg'; // Adjust path to your image file
 
 const MainPage = () => {

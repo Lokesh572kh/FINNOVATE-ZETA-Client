@@ -1,9 +1,10 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import RegistrationForm from './components/RegistrationForm';
-import MainPage from './components/MainPage';
-import WelcomePage from './components/WelcomePage';
+import RegistrationForm from './pages/RegistrationForm';
+import MainPage from './pages/MainPage';
+import WelcomePage from './pages/WelcomePage';
+import Course from './pages/Course';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/MainPage" element={<MainPage />} />
           <Route path="/WelcomePage" element={<WelcomePage />} />
+          <Route path="/Course" element={<Course />} />
           {/* Add other routes here */}
         </Routes>
       </div>

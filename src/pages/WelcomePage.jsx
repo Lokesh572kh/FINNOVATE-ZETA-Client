@@ -1,7 +1,7 @@
 // WelcomePage.jsx
 import React from 'react';
 import backgroundImage from '../assets/images.jpg'; // Adjust path to your image file
-import SoundToggle from './SoundToggle'; // Import the SoundToggle component
+import SoundToggle from '../components/SoundToggle'; // Import the SoundToggle component
 
 const WelcomePage = () => {
   const backgroundStyle = {
