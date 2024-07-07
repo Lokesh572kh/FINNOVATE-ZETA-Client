@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import backgroundImage from '../assets/images.jpg'; // Adjust path to your image file
 
 const AudioRecorder = () => {
   const [audioData, setAudioData] = useState(null);
   const { transcript, resetTranscript } = useSpeechRecognition();
+
+  useEffect(() => {
+    speakTranscript("AAPKA NAAM KYA HAI");
+  }, []); // Empty dependency array ensures this effect runs only once on mount
 
   const startRecording = () => {
     SpeechRecognition.startListening({ continuous: true });
@@ -13,12 +17,36 @@ const AudioRecorder = () => {
   const stopRecording = () => {
     SpeechRecognition.stopListening();
     setAudioData(transcript);
+    speakTranscript(transcript); // Speak the transcript after stopping recording
   };
 
   const handleSubmit = () => {
     // Simulate saving to database
     console.log('Saving to database:', audioData);
     // Here you would typically send `audioData` to your backend for storage
+    resetTranscript();
+    setAudioData(null);
+  };
+
+  const speakTranscript = (text) => {
+    if ('speechSynthesis' in window) {
+      const speechMsg = new SpeechSynthesisUtterance(text);
+      
+      // Set the language to Hindi (India)
+      speechMsg.lang = 'hi-IN';
+      
+      // Optionally, you can set other properties such as voice and rate
+      // Example:
+      // speechMsg.voice = speechSynthesis.getVoices().find(voice => voice.lang === 'hi-IN');
+      // speechMsg.rate = 0.9; // Adjust speech rate as needed
+
+      speechSynthesis.speak(speechMsg);
+    } else {
+      alert('Text-to-speech is not supported in this browser.');
+    }
+  };
+
+  const handleReset = () => {
     resetTranscript();
     setAudioData(null);
   };
@@ -54,6 +82,20 @@ const AudioRecorder = () => {
           <div className="mt-4">
             <h3 className="text-2xl mb-2">Recorded Audio:</h3>
             <p className="bg-gray-800 p-4 rounded-lg">{audioData}</p>
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={() => speakTranscript(transcript)}
+                className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full mr-4"
+              >
+                Speak Transcript
+              </button>
+              <button
+                onClick={handleReset}
+                className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full"
+              >
+                Re-record
+              </button>
+            </div>
           </div>
         )}
       </div>
