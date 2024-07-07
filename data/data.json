@@ -1,0 +1,52 @@
+{
+    "questions" : [{
+        "q_no": 1,
+        "question": "Who is the author of 'Harry Potter' series?",
+        "option1": "J.K. Rowling",
+        "option2": "Stephen King",
+        "option3": "George R.R. Martin",
+        "option4": "Tolkien",
+        "right_answer": "J.K. Rowling",
+        "explanation": "J.K. Rowling is the author of the 'Harry Potter' series."
+    },
+    {
+        "q_no": 2,
+        "question": "What is the largest ocean on Earth?",
+        "option1": "Atlantic Ocean",
+        "option2": "Arctic Ocean",
+        "option3": "Indian Ocean",
+        "option4": "Pacific Ocean",
+        "right_answer": "Pacific Ocean",
+        "explanation": "The Pacific Ocean is the largest ocean on Earth."
+    },
+    {
+        "q_no": 3,
+        "question": "Who wrote the play 'Romeo and Juliet'?",
+        "option1": "William Shakespeare",
+        "option2": "Charles Dickens",
+        "option3": "Jane Austen",
+        "option4": "Mark Twain",
+        "right_answer": "William Shakespeare",
+        "explanation": "'Romeo and Juliet' was written by William Shakespeare."
+    },
+    {
+        "q_no": 4,
+        "question": "What is the chemical symbol for water?",
+        "option1": "W",
+        "option2": "WA",
+        "option3": "H2O",
+        "option4": "H",
+        "right_answer": "H2O",
+        "explanation": "The chemical symbol for water is H2O."
+    },
+    {
+        "q_no": 5,
+        "question": "Which country is famous for the Great Wall?",
+        "option1": "Japan",
+        "option2": "China",
+        "option3": "India",
+        "option4": "Egypt",
+        "right_answer": "China",
+        "explanation": "The Great Wall is located in China."
+    }]
+    }
