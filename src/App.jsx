@@ -6,7 +6,8 @@ import RegistrationForm from './pages/RegistrationForm';
 import MainPage from './pages/MainPage';
 import WelcomePage from './pages/WelcomePage';
 import Course from './pages/Course';
-import AudioRecorder from './components/AudioRecorder';
+import NameRecorder from './pages/NameRecorder';
+import GenderAge from './pages/GenderAge';
 import Entry from './components/Learn/Entry';
 import Children_Module_1 from './components/Learn/Children/Children_Module_1';
 import Children_Module_2 from './components/Learn/Children/Children_Module_2';
@@ -22,7 +23,8 @@ function App() {
           <Route path="/MainPage" element={<MainPage />} />
           <Route path="/WelcomePage" element={<WelcomePage />} />
           <Route path="/Course" element={<Course />} />
-          <Route path="/AudioRecorder" element={<AudioRecorder />} />
+          <Route path="/GenderAge" element={<GenderAge />} />
+          <Route path="/NameRecorder" element={<NameRecorder />} />
           <Route path="/Entry" element={<Entry />} />
           <Route path="/Children_Module_1" element={<Children_Module_1 />} />
           <Route path="/Children_Module_2" element={<Children_Module_2 />} />

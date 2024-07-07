@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import backgroundImage from '../assets/images.jpg'; // Adjust path to your image file
 
-const AudioRecorder = () => {
+const NameRecorder = () => {
   const [audioData, setAudioData] = useState(null);
   const { transcript, resetTranscript } = useSpeechRecognition();
 
   useEffect(() => {
     speakTranscript("AAPKA NAAM KYA HAI");
-  }, []); // Empty dependency array ensures this effect runs only once on mount
+  }, [1]); // Empty dependency array ensures this effect runs only once on mount
 
   const startRecording = () => {
     SpeechRecognition.startListening({ continuous: true });
@@ -83,12 +83,12 @@ const AudioRecorder = () => {
             <h3 className="text-2xl mb-2">Recorded Audio:</h3>
             <p className="bg-gray-800 p-4 rounded-lg">{audioData}</p>
             <div className="flex justify-center mt-4">
-              <button
+              {/* <button
                 onClick={() => speakTranscript(transcript)}
                 className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full mr-4"
               >
                 Speak Transcript
-              </button>
+              </button> */}
               <button
                 onClick={handleReset}
                 className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full"
@@ -103,4 +103,4 @@ const AudioRecorder = () => {
   );
 };
 
-export default AudioRecorder;
+export default NameRecorder;
