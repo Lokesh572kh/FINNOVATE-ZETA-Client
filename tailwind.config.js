@@ -28,11 +28,10 @@ module.exports = {
         dimBlue: "rgba(9, 151, 124, 0.1)",
       },
       backgroundColor:{
-        primary:'#f7f1e5'
+        primary:'#6c4dff'
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        caveat: ['Caveat','sans-serif'],
         mont: ['Montserrat','sans-serif'],
 
       },
