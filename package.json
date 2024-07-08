@@ -14,7 +14,6 @@
     "@babel/runtime": "^7.24.7",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.4",
-    "@rollup/rollup-linux-x64-gnu": "^4.18.0",
     "axios": "^1.7.2",
     "babel-polyfill": "^6.26.0",
     "clsx": "^2.1.1",

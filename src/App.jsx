@@ -8,8 +8,10 @@ import WelcomePage from './pages/WelcomePage';
 import Course from './pages/Course';
 import NameRecorder from './pages/NameRecorder';
 import GenderAge from './pages/GenderAge';
-import BudgetManagement from './pages/BudgetManagement';
 import SimulationGame from './pages/SimulationGame';
+import BudgetManagement from './pages/BudgetManagement';
+import BudgetGame from './pages/BudgetGame';
+import SelectSimulationLevel from './pages/SelectSimulationLevel';
 import SummaryPage from './pages/SummaryPage';
 import Entry from './components/Learn/Entry';
 import Children_Module_1 from './components/Learn/Children/Children_Module_1';
@@ -51,7 +53,9 @@ function App() {
           <Route path="/WelcomePage" element={<WelcomePage />} />
           <Route path="/module/:slug" element={<Course />} />
           <Route path="/SummaryPage" element={<SummaryPage />} />
+          <Route path="/BudgetGame" element={<BudgetGame />} />
           <Route path="/SimulationGame" element={<SimulationGame />} />
+          <Route path="/Simulator" element={<SelectSimulationLevel />} />
           <Route path="/GenderAge" element={<GenderAge />} />
           <Route path="/NameRecorder" element={<NameRecorder />} />
           <Route path="/Entry" element={<Entry />} />

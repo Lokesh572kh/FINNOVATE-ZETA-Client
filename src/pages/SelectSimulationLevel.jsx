@@ -1,5 +1,6 @@
 import React from 'react';
 import backgroundImage from '../assets/images.jpg'; // Adjust path to your image file
+import { Link } from 'react-router-dom';
 
 const SelectSimulationLevel = () => {
   const containerStyle = {
@@ -41,9 +42,9 @@ const SelectSimulationLevel = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold text-black mb-8">Select Simulation Level</h1>
         <div>
-          <button style={easyButtonStyle}>Easy</button>
-          <button style={mediumButtonStyle}>Medium</button>
-          <button style={hardButtonStyle}>Hard</button>
+          <Link to="/SimulationGame" style={easyButtonStyle}>Easy</Link>
+          <Link to="/BudgetGame" style={mediumButtonStyle}>Medium</Link>
+          <Link to="/BudgetManagement" style={hardButtonStyle}>Hard</Link>
         </div>
       </div>
     </div>

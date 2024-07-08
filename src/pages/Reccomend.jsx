@@ -8,7 +8,7 @@ function Reccomen() {
   return (
     <div className="">
       <h2 className="text-[30px] text-center font-poppins font-semibold">
-        Modules specially Curated for you{" "}
+        Let's start your Learning Journey{" "}
       </h2>
       <CarouselComponent items={items} />
     </div>
