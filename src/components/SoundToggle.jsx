@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 
-const SoundToggle = () => {
+const SoundToggle = (text) => {
   const [speakerOn, setSpeakerOn] = useState(true);
 
   const toggleSpeaker = () => {
@@ -11,7 +11,7 @@ const SoundToggle = () => {
   };
 
   return (
-    <div className="sound-toggle" onClick={toggleSpeaker}>
+    <div className="p-3 rounded-full fixed text-[30px] m-10 bottom-0 z-50 bg-primary text-white"  onClick={toggleSpeaker}>
       {speakerOn ? <FaVolumeUp /> : <FaVolumeMute />}
     </div>
   );

@@ -21,8 +21,8 @@ const ModuleNav = ({ courseName, itemsLeft, totalItems }) => {
 
       <div className="w-full mt-2 bg-gray-200 rounded-full h-3 overflow-hidden">
         <div
-          className="bg-green-500 h-full"
-          style={{ width: `${(itemsLeft / totalItems) * 100}%` }} // Correct interpolation syntax
+          className="bg-green-500 h-full transition-all duration-500 ease-out" // Added transition class
+          style={{ width: `${(itemsLeft / totalItems) * 100}%` }}
         ></div>
       </div>
     </div>

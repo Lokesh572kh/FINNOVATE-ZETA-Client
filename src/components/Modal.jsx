@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { GrStatusGood } from "react-icons/gr";
 import { BsEmojiSmileUpsideDownFill } from "react-icons/bs";
-const Modal = ({ isOpen, onClose, isCorrect }) => {
+const Modal = ({ isOpen, onClose, isCorrect,soln }) => {
   useEffect(() => {
     let timer;
     if (isOpen) {
@@ -22,10 +22,10 @@ const Modal = ({ isOpen, onClose, isCorrect }) => {
             isCorrect ? <GrStatusGood className="text-green-500 text-6xl text-center" /> : <BsEmojiSmileUpsideDownFill className='text-blue-500 text-6xl text-center' />
         }
         <h2 className="text-2xl font-bold mt-2 mb-4">
-          {isCorrect ? "Congratulations!" : "Better luck next time!"}
+          {isCorrect ? "Correct Option!" : "Incorrect Option!"}
         </h2>
         <p className="text-lg">
-          {isCorrect ? "You got it right!" : "Work harder next time!"}
+          {soln}
         </p>
       </div>
       {/* <div className="fixed inset-0 bg-black opacity-50"></div> */}
