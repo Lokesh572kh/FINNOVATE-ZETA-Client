@@ -45,7 +45,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/registration" element={<RegistrationForm />} />
+          <Route path="/signup" element={<RegistrationForm />} />
           <Route path="/" element={<MainPage />} />
           <Route path="/BudgetManagement" element={<BudgetManagement />} />
           <Route path="/WelcomePage" element={<WelcomePage />} />

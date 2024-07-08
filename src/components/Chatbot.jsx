@@ -43,7 +43,7 @@ const Chatbot = () => {
 
     try {
       const response = await axios.post(
-        "https://mag-pipes-rl-id.trycloudflare.com/query",
+        "https://amend-hormone-author-mar.trycloudflare.com/query",
         {
           query: input,
           background_key: "back_1_m",

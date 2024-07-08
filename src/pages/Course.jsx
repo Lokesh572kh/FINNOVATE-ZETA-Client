@@ -32,7 +32,7 @@ const Course = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          `https://mag-pipes-rl-id.trycloudflare.com/generate_mcq`,
+          `https://amend-hormone-author-mar.trycloudflare.com/generate_mcq`,
           {
             query: item.title+". "+item.intro,
             background_key: "back_1_m",
