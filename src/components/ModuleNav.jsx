@@ -9,7 +9,7 @@ const ModuleNav = ({ courseName, itemsLeft, totalItems }) => {
           Details
         </Button>
         <div className="flex flex-col items-center">
-          <h1 className="text-2xl font-semibold my-3">{courseName}</h1>
+          <h1 className="text-2xl font-semibold my-3 capitalize">{courseName}</h1>
           <div className="text-gray-600 text-lg">
             Module Completed: {itemsLeft}/{totalItems}
           </div>

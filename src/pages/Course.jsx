@@ -8,10 +8,13 @@ import SoundToggle from "../components/SoundToggle";
 import { useParams } from "react-router-dom";
 import { content } from "../constants";
 import axios from "axios";
+import { slugToTitle } from "../utils";
 
 const Course = () => {
 
   const params = useParams();
+
+
 
   function findTitleAndIntro(slug) {
     for (let key in content) {
@@ -21,7 +24,10 @@ const Course = () => {
         }
       }
     }
-    return null; // Return null if the slug is not found
+    return {
+      title:slugToTitle(params.slug),
+      intro:""
+    };
   }
 
   const item = findTitleAndIntro(params.slug);

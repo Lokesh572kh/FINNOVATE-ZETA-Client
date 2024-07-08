@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { titleToSlug } from "../utils";
 
 const CustomCourse = () => {
   const [inputValue, setInputValue] = useState("");
@@ -27,7 +28,7 @@ const CustomCourse = () => {
           className="p-3 w-[400px] border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <Link
-          to={`/module/${inputValue}`}
+          to={`/module/${titleToSlug(inputValue)}`}
           className="p-2 font-bold font-mont px-4 bg-blue-500 text-white rounded hover:bg-blue-600 flex justify-center items-center focus:outline-none  focus:ring-2 focus:ring-blue-500"
         >
           Learn!
