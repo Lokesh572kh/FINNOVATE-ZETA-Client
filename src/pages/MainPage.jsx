@@ -8,6 +8,7 @@ import {Header} from "../components/Header";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Reccomen from "./Reccomend";
+import Chatbot from "../components/Chatbot"
 
 const MainPage = () => {
   // useEffect(() => {
@@ -80,6 +81,7 @@ const MainPage = () => {
       <Header />
       <Hero />
       <Reccomen/>
+      <Chatbot/>
       <SoundToggle/>
     </>
   );

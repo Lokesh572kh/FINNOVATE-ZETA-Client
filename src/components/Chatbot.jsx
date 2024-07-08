@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { SiChatbot } from "react-icons/si";
 import { AiOutlineSend } from "react-icons/ai";
@@ -9,6 +9,21 @@ const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [speaking, setSpeaking] = useState(false); // State to manage speech synthesis
+
+  useEffect(() => {
+    // Initialize speech synthesis on component mount
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        const voices = window.speechSynthesis.getVoices();
+        // Set Indian English voice if available
+        const indianEnglishVoice = voices.find(
+          (voice) => voice.lang === "en-IN"
+        );
+        setVoice(indianEnglishVoice || voices[0]); // Fallback to default voice if not found
+      };
+    }
+  }, []);
 
   const toggleChatbot = () => {
     setIsOpen(!isOpen);
@@ -25,26 +40,41 @@ const Chatbot = () => {
     const newMessage = { sender: "user", text: input };
     setInput("");
     setMessages([...messages, newMessage]);
-    
+
     try {
-        const response = await axios.post(
+      const response = await axios.post(
         "https://mag-pipes-rl-id.trycloudflare.com/query",
         {
-            query: input,
-            background_key: "back_1_m",
+          query: input,
+          background_key: "back_1_m",
         }
       );
 
       const botMessage = { sender: "bot", text: response.data.response };
       setMessages((prevMessages) => [...prevMessages, botMessage]);
+
+      // Speak the bot's response
+      speakText(response.data.response);
     } catch (error) {
       console.error("Error sending message:", error);
     }
-
   };
 
+  const speakText = (text) => {
+    if ("speechSynthesis" in window && !speaking) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.voice = voice; // Set the selected voice
+      setSpeaking(true);
+      window.speechSynthesis.speak(utterance);
+      utterance.onend = () => {
+        setSpeaking(false);
+      };
+    }
+  };
+
+  const [voice, setVoice] = useState(null); // State to manage speech synthesis voice
+
   return (
-    //p-3 rounded-full fixed text-[30px] m-6 bottom-0 z-50 bg-primary text-white
     <>
       <div
         className="fixed bottom-0 right-0 p-3 text-[30px] m-10 bg-gray-600 cursor-pointer text-white z-50  rounded-full  shadow-lg hover:text-blue-700"

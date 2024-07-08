@@ -25,8 +25,8 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/registration" element={<RegistrationForm />} />
-          <Route path="/MainPage" element={<MainPage />} />
+          <Route path="/signup" element={<RegistrationForm />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="/BudgetManagement" element={<BudgetManagement />} />
           <Route path="/BudgetGame" element={<BudgetGame />} />
           <Route path="/WelcomePage" element={<WelcomePage />} />
