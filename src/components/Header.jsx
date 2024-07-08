@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 // import { Button } from '@/components/Button'
 import { Button } from './Button'
 import { Container } from './Container'
-import { Logo } from './Logo'
 import { NavLinks } from './NavLinks'
+import { useFormContext } from '../Context/form'
 
 function MenuIcon(props) {
   return (
@@ -36,7 +36,7 @@ function ChevronUpIcon(props) {
 function MobileNavLink({ children, ...props }) {
   return (
     <PopoverButton
-      as={Link}
+      as='a'
       className="block text-base leading-7 tracking-tight text-gray-700"
       {...props}
     >
@@ -45,7 +45,10 @@ function MobileNavLink({ children, ...props }) {
   )
 }
 
+
 export function Header() {
+  const { form } = useFormContext();
+  console.log(form);
   return (
     <header>
       <nav>
@@ -99,11 +102,11 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="#features">
-                              Features
+                            <MobileNavLink href="/learn">
+                              Learn
                             </MobileNavLink>
-                            <MobileNavLink href="#reviews">
-                              Reviews
+                            <MobileNavLink href="/play">
+                            Play
                             </MobileNavLink>
                             <MobileNavLink href="#pricing">
                               Pricing
@@ -123,12 +126,12 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/login" variant="outline" className="hidden lg:block">
-              Log in
-            </Button>
-            <Button href="#" className="hidden lg:block">
-              Register
-            </Button>
+            
+            {!form?(<Button href="/signup" className="hidden lg:block">
+              Create Account
+            </Button>):(<Button href="/dashboard" className="hidden lg:block">
+              Dashboard
+              </Button>)}
           </div>
         </Container>
       </nav>
