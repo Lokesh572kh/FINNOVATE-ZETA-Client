@@ -9,13 +9,16 @@ import Course from './pages/Course';
 import NameRecorder from './pages/NameRecorder';
 import GenderAge from './pages/GenderAge';
 import BudgetManagement from './pages/BudgetManagement';
+import BudgetGame from './pages/BudgetGame';
 import SimulationGame from './pages/SimulationGame';
 import SummaryPage from './pages/SummaryPage';
+import SelectSimulationLevel from './pages/SelectSimulationLevel';
 import Entry from './components/Learn/Entry';
 import Children_Module_1 from './components/Learn/Children/Children_Module_1';
 import Children_Module_2 from './components/Learn/Children/Children_Module_2';
 import Children_Module_3 from './components/Learn/Children/Children_Module_3';
 import Children_Module_4 from './components/Learn/Children/Children_Module_4';
+
 
 function App() {
   return (
@@ -25,9 +28,11 @@ function App() {
           <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/MainPage" element={<MainPage />} />
           <Route path="/BudgetManagement" element={<BudgetManagement />} />
+          <Route path="/BudgetGame" element={<BudgetGame />} />
           <Route path="/WelcomePage" element={<WelcomePage />} />
           <Route path="/Course" element={<Course />} />
           <Route path="/SummaryPage" element={<SummaryPage />} />
+          <Route path="/SelectSimulationLevel" element={<SelectSimulationLevel />} />
           <Route path="/SimulationGame" element={<SimulationGame />} />
           <Route path="/GenderAge" element={<GenderAge />} />
           <Route path="/NameRecorder" element={<NameRecorder />} />
