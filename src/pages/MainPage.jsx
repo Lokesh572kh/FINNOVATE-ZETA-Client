@@ -8,7 +8,7 @@ import {Header} from "../components/Header";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Reccomen from "./Reccomend";
-import Chatbot from "../components/Chatbot"
+import Chatbot from "../components/Chatbot";
 
 import loadingScreenImage1 from './../../public/loading1.png';
 
@@ -103,8 +103,8 @@ const MainPage = () => {
       <Header />
       <Hero />
       <Reccomen/>
-      <Chatbot/>
       <SoundToggle/>
+      <Chatbot/>
     </>
   );
 };
