@@ -76,3 +76,21 @@ body {
     color: #555555;
   }
   
+  /* src/App.css */
+#google_translate_element {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.skiptranslate span {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+iframe{
+  display: none !important;
+}

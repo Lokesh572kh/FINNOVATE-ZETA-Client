@@ -11,10 +11,10 @@ const QuizGame = () => {
   const [timeLeft, setTimeLeft] = useState(120); // Timer set to 2 minutes (120 seconds)
 
   const options = [
-    { id: 1, label: 'Option 1', value: 20, text: 'Common Text' },
-    { id: 2, label: 'Option 2', value: 60, text: 'Common Text' },
-    { id: 3, label: 'Option 3', value: 30, text: 'Common Text' },
-    { id: 4, label: 'Option 4', value: 100, text: 'Special Text' },
+    { id: 1, label: 'Savings', value: 20, text: 'Invest in Savings' },
+    { id: 2, label: 'Fixed Deposit', value: 30, text: 'Invest in Fixed Deposit' },
+    { id: 3, label: 'Stock Market', value: 50, text: 'Invest in Stock Market' },
+    { id: 4, label: 'CryptoCurrency', value: 100, text: 'Invest in CryptoCurrency' },
   ];
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const QuizGame = () => {
         </div>
       </header>
       <main className="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center mt-16">
-        <h2 className="text-2xl mb-4">What is your choice?</h2>
+        <h2 className="text-2xl mb-4">Where will you invest your ₹100?</h2>
         <div className="grid grid-cols-2 gap-4 mb-4">
           {options.map((option) => (
             <button
@@ -99,7 +99,7 @@ const QuizGame = () => {
                     : 'bg-gray-500 text-white cursor-not-allowed'
               }`}
             >
-              {option.label} - {option.value}
+              {option.label} - ₹{option.value}
             </button>
           ))}
         </div>

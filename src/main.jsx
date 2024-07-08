@@ -8,7 +8,9 @@ import { FormProvider } from './Context/form.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FormProvider>
+
     <App />
+    
     </FormProvider>
   </React.StrictMode>,
 )

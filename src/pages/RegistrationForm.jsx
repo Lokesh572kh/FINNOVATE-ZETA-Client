@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 import { Header } from "../components/Header";
 import { useFormContext } from "../Context/form";
@@ -55,28 +55,6 @@ const RegistrationForm = () => {
   });
   const [speakerOn, setSpeakerOn] = useState(true);
 
-  useEffect(() => {
-    const addGoogleTranslateScript = () => {
-      if (!window.googleTranslateElementInit) {
-        const script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src =
-          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-        script.async = true;
-        script.onload = () => {
-          window.googleTranslateElementInit = () => {
-            new window.google.translate.TranslateElement(
-              { pageLanguage: "en" },
-              "google_translate_element"
-            );
-          };
-        };
-        document.body.appendChild(script);
-      }
-    };
-
-    addGoogleTranslateScript();
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
