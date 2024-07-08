@@ -1,5 +1,5 @@
 // MainPage.jsx
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CompanyLogo from "../components/CompanyLogo";
 import ProfileDropdown from "../components/ProfileDropdown";
 import SoundToggle from "../components/SoundToggle"; // Adjust path to your SoundToggle component
@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Reccomen from "./Reccomend";
 import Chatbot from "../components/Chatbot";
+import LoadingScreen from "./Loading";
 import CustomCourse from "../components/CustomCourse";
 
 const MainPage = () => {
@@ -77,15 +78,33 @@ const MainPage = () => {
     color: "#fff", // White color for sound icon
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [mainPageOpacity, setMainPageOpacity] = useState(0);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+    // Start fading in the main page content
+    setTimeout(() => setMainPageOpacity(1), 50);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return (
-    <>
+    <div 
+      style={{
+        opacity: mainPageOpacity,
+        transition: 'opacity 1s ease-in-out'
+      }}
+    >
       <Header />
       <Hero />
       <Reccomen/>
-      <CustomCourse/>
       <SoundToggle/>
+      <CustomCourse/>
       <Chatbot/>
-    </>
+    </div>
   );
 };
 
