@@ -1,5 +1,5 @@
 // MainPage.jsx
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CompanyLogo from "../components/CompanyLogo";
 import ProfileDropdown from "../components/ProfileDropdown";
 import SoundToggle from "../components/SoundToggle"; // Adjust path to your SoundToggle component
@@ -9,6 +9,15 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Reccomen from "./Reccomend";
 import Chatbot from "../components/Chatbot"
+
+import loadingScreenImage1 from './../../public/loading1.png';
+
+const LoadingScreen = () => (
+  <div className="loading-screen">
+    <div className="spinner"></div>
+    <img src={loadingScreenImage1} alt="Loading Screen 1" className="h-screen w-full" />
+  </div>
+);
 
 const MainPage = () => {
   // useEffect(() => {
@@ -75,6 +84,19 @@ const MainPage = () => {
   const soundIconStyle = {
     color: "#fff", // White color for sound icon
   };
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <>
