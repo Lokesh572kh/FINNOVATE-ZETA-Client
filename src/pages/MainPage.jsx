@@ -9,15 +9,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Reccomen from "./Reccomend";
 import Chatbot from "../components/Chatbot";
-
-import loadingScreenImage1 from './../../public/loading1.png';
-
-const LoadingScreen = () => (
-  <div className="loading-screen">
-    <div className="spinner"></div>
-    <img src={loadingScreenImage1} alt="Loading Screen 1" className="h-screen w-full" />
-  </div>
-);
+import LoadingScreen from "./Loading";
 
 const MainPage = () => {
   // useEffect(() => {
@@ -86,26 +78,31 @@ const MainPage = () => {
   };
 
   const [isLoading, setIsLoading] = useState(true);
+  const [mainPageOpacity, setMainPageOpacity] = useState(0);
 
-  useEffect(() => {
-    // Simulate loading time
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+    // Start fading in the main page content
+    setTimeout(() => setMainPageOpacity(1), 50);
+  };
 
   if (isLoading) {
-    return <LoadingScreen />;
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
   }
 
   return (
-    <>
+    <div 
+      style={{
+        opacity: mainPageOpacity,
+        transition: 'opacity 1s ease-in-out'
+      }}
+    >
       <Header />
       <Hero />
       <Reccomen/>
       <SoundToggle/>
       <Chatbot/>
-    </>
+    </div>
   );
 };
 
