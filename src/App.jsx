@@ -8,6 +8,9 @@ import WelcomePage from './pages/WelcomePage';
 import Course from './pages/Course';
 import NameRecorder from './pages/NameRecorder';
 import GenderAge from './pages/GenderAge';
+import BudgetManagement from './pages/BudgetManagement';
+import SimulationGame from './pages/SimulationGame';
+import SummaryPage from './pages/SummaryPage';
 import Entry from './components/Learn/Entry';
 import Children_Module_1 from './components/Learn/Children/Children_Module_1';
 import Children_Module_2 from './components/Learn/Children/Children_Module_2';
@@ -21,8 +24,11 @@ function App() {
         <Routes>
           <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/MainPage" element={<MainPage />} />
+          <Route path="/BudgetManagement" element={<BudgetManagement />} />
           <Route path="/WelcomePage" element={<WelcomePage />} />
           <Route path="/Course" element={<Course />} />
+          <Route path="/SummaryPage" element={<SummaryPage />} />
+          <Route path="/SimulationGame" element={<SimulationGame />} />
           <Route path="/GenderAge" element={<GenderAge />} />
           <Route path="/NameRecorder" element={<NameRecorder />} />
           <Route path="/Entry" element={<Entry />} />
