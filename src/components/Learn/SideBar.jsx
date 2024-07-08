@@ -45,7 +45,7 @@ import {
       <div className="min-h-screen container mx-auto px-2">
         <div className="flex md:py-12 py-6">
           {/* Sidebar section */}
-          <div className="w-64 sticky top-0 h-auto bg-main border border-gray-800 p-5 rounded-md mr-5 text-black">
+          <div className="w-64 sticky top-0 h-1/5 bg-main border border-gray-800 p-5 rounded-md mr-5 text-black">
             {
               // Rendering sidebar links
               SideLinks.map((link, index) => (
@@ -61,7 +61,7 @@ import {
             data-aos-duration="1000"
             data-aos-delay="10"
             data-aos-offset="200"
-            className="flex-1 rounded-md bg-main border border-gray-800 p-6"
+            className="flex-1 rounded-md bg-main border border-gray-800 p-4"
           >
             {children}
           </div>
