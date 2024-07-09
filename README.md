@@ -1,6 +1,6 @@
 <!-- Create a readme file for the project -->
 
-# Project Name
+# FINNOVATE-ZETA [Fintech Hackathon FINNOVATE'24 Winner]
 
 ## Description
 
