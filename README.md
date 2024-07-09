@@ -1,16 +1,17 @@
-<!-- Create a readme file for the project -->
-
-# FINNOVATE-ZETA [Fintech Hackathon FINNOVATE'24 Winner]
+# FINNOVATE-ZETA 
+## Winner of FINNOVATE'24 Hackathon 
 
 ## Description
 
-This is a project is a solution given by Team ZETA in a Fintech Hackathon FINNOVATE'24 organised by IIEC, IIT Gandhinagar.This Project aim to provide financial literacy to all target groups,unserved people ,underserved people,women,youngsters,students,etc. We are providing a platform where people can learn about anything financial literacy, financial planning, investment, savings, etc.
+This project is a solution provided by Team ZETA in the FINNOVATE'24 Fintech Hackathon organized by IIEC, IIT Gandhinagar. Our aim is to deliver financial literacy to various target groups, including underserved and unserved populations, women, youngsters, students, and more. We offer a platform where individuals can learn about financial literacy, financial planning, investment, savings, and related topics.
 
-Each Topics have well-Structered modules and quizs to test the knowledge of the user. We are also providing a chat platform where user can ask their queries and get the answer from the specifically trained LLM.
+Each topic includes well-structured modules and quizzes to test the user's knowledge. Additionally, we provide a chat platform where users can ask queries and receive answers from a specifically trained LLM.
 
-We have also Gamified the platform by introducing Simulations, where user can simulate the real world scenarios and learn from it.
+To enhance the learning experience, we have gamified the platform with simulations, allowing users to practice real-world scenarios and learn from them.
 
-also a Calling feature is provided where user can call the LLM and ask their queries related to finance.Our bot will speak to them in very human like voice and will answer their queries.
+We Have also added a discussion forum where users can ask questions and get answers from other users.
+
+Moreover, a calling feature is available where users can call the LLM to ask finance-related queries. Our bot will respond in a very human-like voice, providing answers to their questions.
 
 ## Installation
 
@@ -20,5 +21,19 @@ also a Calling feature is provided where user can call the LLM and ask their que
 ## Usage
 
 1. Run the application by executing `npm start`.
-2. Open your web browser and navigate to `http://localhost:`.
+2. Open your web browser and navigate to `http://localhost:3000`.
+
+## Images
+
+### Homepage
+![Platform Overview](/src/assets/GITHUB/Screenshot%20from%202024-07-09%2016-53-37.png)
+
+### Module Page
+![Module Page](/src/assets/GITHUB/Screenshot%20from%202024-07-08%2012-50-41.png)
+
+### Quiz Section
+![Quiz Section](/src/assets/GITHUB/Screenshot%20from%202024-07-08%2012-50-48.png)
+
+### Chat Platform
+![Chat Platform](/src//assets/GITHUB/Screenshot%20from%202024-07-09%2016-58-06.png)
 
