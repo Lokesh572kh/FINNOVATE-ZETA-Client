@@ -34,6 +34,15 @@ Moreover, a calling feature is available where users can call the LLM to ask fin
 ### Quiz Section
 ![Quiz Section](/src/assets/GITHUB/Screenshot%20from%202024-07-08%2012-50-48.png)
 
+### Simulation Section
+![Chat Platform](/src//assets/GITHUB/Screenshot%20from%202024-07-10%2000-33-15.png)
+
+### Game Section
+![Chat Platform](/src//assets/GITHUB/Screenshot%20from%202024-07-10%2000-33-54.png)
+
 ### Chat Platform
+![Chat Platform](/src//assets/GITHUB/Screenshot%20from%202024-07-08%2012-53-52.png)
+
+### Discussion Forum
 ![Chat Platform](/src//assets/GITHUB/Screenshot%20from%202024-07-09%2016-58-06.png)
 
