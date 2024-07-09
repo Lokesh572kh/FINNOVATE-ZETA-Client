@@ -84,7 +84,7 @@ const MainPage = () => {
   const handleLoadingComplete = () => {
     setIsLoading(false);
     // Start fading in the main page content
-    setTimeout(() => setMainPageOpacity(1), 50);
+    setTimeout(() => setMainPageOpacity(1), 20);
   };
 
   if (isLoading) {

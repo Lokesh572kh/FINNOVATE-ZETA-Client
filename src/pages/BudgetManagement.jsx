@@ -82,7 +82,7 @@ const BudgetManagement = () => {
         </button>
         <h1 className="ml-4 text-2xl font-bold text-white">Investment Portfolio Simulator</h1>
       </header>
-      <div className="absolute top-4 right-4 text-white text-lg">
+      <div className="absolute top-10 right-4 text-white text-lg">
         Cash: ₹{cash.toFixed(2)}
       </div>
       <div className="absolute top-4 right-40 text-white text-lg flex items-center">

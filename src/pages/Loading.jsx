@@ -9,16 +9,16 @@ const LoadingScreen = ({ onLoadingComplete }) => {
   
     useEffect(() => {
       // Fade in
-      const fadeInTimer = setTimeout(() => setOpacity(1), 100);
+      const fadeInTimer = setTimeout(() => setOpacity(1), 50);
   
       // Switch to second image
-      const switchImageTimer = setTimeout(() => setCurrentImage(1), 3000);
+      const switchImageTimer = setTimeout(() => setCurrentImage(1), 1000);
   
       // Fade out
       const fadeOutTimer = setTimeout(() => {
         setOpacity(0);
-        setTimeout(onLoadingComplete, 1000); // Call onLoadingComplete after fade out
-      }, 5000);
+        setTimeout(onLoadingComplete, 200); // Call onLoadingComplete after fade out
+      }, 2000);
   
       return () => {
         clearTimeout(fadeInTimer);

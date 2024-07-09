@@ -1,9 +1,29 @@
-# React + Vite
+<!-- Create a readme file for the project -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Name
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# finnovate_user_client
+This is a project is a solution given by Team ZETA in a Fintech Hackathon FINNOVATE'24 organised by IIEC, IIT Gandhinagar.
+
+## Installation
+
+1. Clone the repository.
+2. Install the required dependencies by running `npm install`.
+
+## Usage
+
+1. Run the application by executing `npm start`.
+2. Open your web browser and navigate to `http://localhost:3000`.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
