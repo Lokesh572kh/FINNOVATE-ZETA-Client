@@ -1,6 +1,5 @@
 # FINNOVATE-ZETA 
-## Winner of FINNOVATE'24 Hackathon 
-##(Team Members: Lokesh Khandelwal, Sujit Jaunjal, Rishab, Mayank, Karan
+## Winner of FINNOVATE'24 Hackathon (Team Members: Lokesh Khandelwal, Sujit Jaunjal, Rishab, Mayank, Karan)
 ## Description
 
 This project is a solution provided by Team ZETA in the FINNOVATE'24 Fintech Hackathon organized by IIEC, IIT Gandhinagar. Our aim is to deliver financial literacy to various target groups, including underserved and unserved populations, women, youngsters, students, and more. We offer a platform where individuals can learn about financial literacy, financial planning, investment, savings, and related topics.
